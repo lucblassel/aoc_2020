@@ -2,6 +2,7 @@ use regex::Regex;
 use std::collections::HashSet;
 
 fn main() {
+    println!("Day 08:");
     let input = include_str!("../../inputs/08.txt");
     let regex = Regex::new(r"(nop|acc|jmp) (.+)").unwrap();
 
@@ -22,7 +23,7 @@ fn main() {
         .collect();
 
     let (acc1, _) = execute_prog(&instructions);
-    println!("1) {acc1}");
+    println!("\t1) {acc1}");
 
     for (cursor, instruction) in instructions.iter().enumerate() {
         match instruction {
@@ -30,7 +31,7 @@ fn main() {
             _ => {
                 let (acc, halted) = execute_with_switch(&instructions, cursor);
                 if halted {
-                    println!("2) {acc}");
+                    println!("\t2) {acc}");
                     break;
                 }
             }

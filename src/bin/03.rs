@@ -1,4 +1,5 @@
 fn main() {
+    println!("Day 03:");
     let input = include_str!("../../inputs/03.txt");
 
     let lines: Vec<Vec<char>> = input
@@ -32,6 +33,6 @@ fn main() {
     }
 
     let mult: i32 = trees.iter().product();
-    println!("1) {}", trees[1]);
-    println!("2) {mult}");
+    println!("\t1) {}", trees[1]);
+    println!("\t2) {mult}");
 }

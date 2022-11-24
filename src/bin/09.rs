@@ -1,4 +1,5 @@
 fn main() {
+    println!("Day 09:");
     let input = include_str!("../../inputs/09.txt");
     let mut to_check: Vec<u64> = vec![];
     let len_to_check = 25;
@@ -17,7 +18,7 @@ fn main() {
         }
         if !check_sum(num, &to_check[..]) {
             wrong_num = *num;
-            println!("1) {num}");
+            println!("\t1) {num}");
             break;
         }
         to_check.remove(0);
@@ -43,7 +44,7 @@ fn main() {
     }
 
     println!(
-        "2) {}",
+        "\t2) {}",
         range.iter().min().unwrap() + range.iter().max().unwrap()
     );
 }

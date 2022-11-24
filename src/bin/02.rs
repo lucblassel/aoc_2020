@@ -66,6 +66,7 @@ fn is_valid_2(line: &str) -> Result<bool, String> {
 }
 
 fn main() {
+    println!("Day 02:");
     let input = include_str!("../../inputs/02.txt");
 
     // Part 1
@@ -75,7 +76,7 @@ fn main() {
         .filter(|v| v.is_valid())
         .count();
 
-    println!("1) {}", count);
+    println!("\t1) {}", count);
 
     // Part 2
     let count2 = input
@@ -83,5 +84,5 @@ fn main() {
         .filter(|l| is_valid_2(l).unwrap())
         .count();
 
-        println!("2) {}", count2);
+        println!("\t2) {}", count2);
 }

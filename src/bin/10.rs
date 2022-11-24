@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 
 fn main() {
+    println!("Day 10:");
     let input = include_str!("../../inputs/10.txt");
 
     let mut differences: HashMap<u32, u32> = HashMap::new();
@@ -32,14 +33,14 @@ fn main() {
     }
 
     println!(
-        "1) {}",
+        "\t1) {}",
         differences.get(&1).unwrap() * differences.get(&3).unwrap()
     );
 
     let mut cache: HashMap<u32, u64> = HashMap::new();
     let paths = check_path(0, &graph, device_jolts, &mut cache);
 
-    println!("2) {paths}");
+    println!("\t2) {paths}");
 }
 
 fn check_path(start: u32, graph: &HashMap<u32, Vec<u32>>, end: u32, cache: &mut HashMap<u32, u64>) -> u64 {

@@ -1,6 +1,7 @@
 use std::collections::{HashMap, HashSet};
 
 fn main() {
+    println!("Day 04:");
     let input = include_str!("../../inputs/04.txt");
 
     let mut records: Vec<Vec<&str>> = vec![];
@@ -51,8 +52,8 @@ fn main() {
         }
     }
 
-    println!("1) {valid_1}");
-    println!("2) {valid_2}");
+    println!("\t1) {valid_1}");
+    println!("\t2) {valid_2}");
 }
 
 pub mod validation {

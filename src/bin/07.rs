@@ -2,6 +2,7 @@ use regex::Regex;
 use std::collections::{HashMap, HashSet};
 
 fn main() {
+    println!("Day 07:");
     let input = include_str!("../../inputs/07.txt");
 
     let parent_re = Regex::new(r"^(.+) bags contain").unwrap();
@@ -48,12 +49,12 @@ fn main() {
     }
 
     println!(
-        "1) {}",
+        "\t1) {}",
         visited.len()
     );
 
     println!(
-        "2) {}",
+        "\t2) {}",
         count_contained("shiny gold", &containers) - 1
     )
 }

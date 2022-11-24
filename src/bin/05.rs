@@ -1,19 +1,20 @@
 use std::ops::Range;
 
 fn main() {
+    println!("Day 05:");
     let input = include_str!("../../inputs/05.txt");
 
     let mut seats: Vec<i32> = input.lines().map(get_seat).collect();
 
     seats.sort();
 
-    println!("1) {}", seats.last().unwrap());
+    println!("\t1) {}", seats.last().unwrap());
 
     let mut prev_seat = -1;
 
     for seat in seats {
         if prev_seat != -1 && seat - prev_seat > 1 {
-            println!("2) {}", seat - 1);
+            println!("\t2) {}", seat - 1);
             break;
         }
         prev_seat = seat;

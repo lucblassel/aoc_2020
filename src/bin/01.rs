@@ -1,6 +1,7 @@
 use itertools::Itertools;
 
 fn main() {
+    println!("Day 01:");
     let input = include_str!("../../inputs/01.txt");
 
     let numbers = input.lines().map(|num| str::parse::<i32>(num).unwrap());
@@ -11,7 +12,7 @@ fn main() {
         .filter(|(num1, num2)| num1 + num2 == 2020);
 
     if let Some((num1, num2)) = pb1.next() {
-        println!("1) {}", num1 * num2);
+        println!("\t1) {}", num1 * num2);
     }
 
     let mut pb2 = numbers
@@ -19,6 +20,6 @@ fn main() {
         .filter(|(num1, num2, num3)| num1 + num2 + num3 == 2020);
 
     if let Some((num1, num2, num3)) = pb2.next() {
-        println!("2) {}", num1 * num2 * num3);
+        println!("\t2) {}", num1 * num2 * num3);
     }
 }

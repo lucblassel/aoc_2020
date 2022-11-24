@@ -1,4 +1,5 @@
 fn main() {
+    println!("Day 06:");
     let input = include_str!("../../inputs/06.txt");
 
     let mut counts: Vec<[i32; 26]> = vec![];
@@ -33,6 +34,6 @@ fn main() {
         .map(|(count, size)| count.iter().filter(|&x| *x == *size).count())
         .sum();
 
-    println!("1) {c1}");
-    println!("2) {c2}");
+    println!("\t1) {c1}");
+    println!("\t2) {c2}");
 }
