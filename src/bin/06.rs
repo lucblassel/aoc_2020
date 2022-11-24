@@ -33,6 +33,6 @@ fn main() {
         .map(|(count, size)| count.iter().filter(|&x| *x == *size).count())
         .sum();
 
-    println!("Part1: {c1}");
-    println!("Part2: {c2}");
+    println!("1) {c1}");
+    println!("2) {c2}");
 }

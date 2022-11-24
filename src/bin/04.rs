@@ -24,7 +24,8 @@ fn main() {
         .collect();
 
     // validate records:
-    let mut valid = 0;
+    let mut valid_1 = 0;
+    let mut valid_2 = 0;
     for record in records {
         if record.len() < 7 {
             continue;
@@ -41,12 +42,17 @@ fn main() {
             mandatory: &mandatory_fields,
         };
 
+        if passport.has_valid_fields() {
+            valid_1 += 1;
+        }
+
         if passport.is_valid() {
-            valid += 1;
+            valid_2 += 1;
         }
     }
 
-    println!("{valid} valid passports");
+    println!("1) {valid_1}");
+    println!("2) {valid_2}");
 }
 
 pub mod validation {
@@ -106,7 +112,7 @@ pub mod validation {
             true
         }
 
-        fn has_valid_fields(&'a self) -> bool {
+        pub fn has_valid_fields(&'a self) -> bool {
             let keys: HashSet<String> = self.entries.keys().cloned().collect();
             (self.mandatory - &keys).is_empty()
         }

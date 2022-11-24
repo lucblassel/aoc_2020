@@ -22,7 +22,7 @@ fn main() {
         .collect();
 
     let (acc1, _) = execute_prog(&instructions);
-    println!("1) Acc: {acc1}");
+    println!("1) {acc1}");
 
     for (cursor, instruction) in instructions.iter().enumerate() {
         match instruction {
@@ -30,7 +30,7 @@ fn main() {
             _ => {
                 let (acc, halted) = execute_with_switch(&instructions, cursor);
                 if halted {
-                    println!("2) Acc: {acc}");
+                    println!("2) {acc}");
                     break;
                 }
             }

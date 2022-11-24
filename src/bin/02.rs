@@ -75,7 +75,7 @@ fn main() {
         .filter(|v| v.is_valid())
         .count();
 
-    println!("{} valid password(s) (V.1)", count);
+    println!("1) {}", count);
 
     // Part 2
     let count2 = input
@@ -83,5 +83,5 @@ fn main() {
         .filter(|l| is_valid_2(l).unwrap())
         .count();
 
-        println!("{} valid password(s) (V.2)", count2);
+        println!("2) {}", count2);
 }

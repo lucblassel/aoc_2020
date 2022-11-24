@@ -7,11 +7,13 @@ fn main() {
 
     seats.sort();
 
+    println!("1) {}", seats.last().unwrap());
+
     let mut prev_seat = -1;
 
     for seat in seats {
         if prev_seat != -1 && seat - prev_seat > 1 {
-            println!("My Seat: {}", seat - 1);
+            println!("2) {}", seat - 1);
             break;
         }
         prev_seat = seat;

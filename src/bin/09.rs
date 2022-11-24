@@ -17,7 +17,7 @@ fn main() {
         }
         if !check_sum(num, &to_check[..]) {
             wrong_num = *num;
-            println!("{num} is not correct!");
+            println!("1) {num}");
             break;
         }
         to_check.remove(0);
@@ -43,7 +43,7 @@ fn main() {
     }
 
     println!(
-        "Sum of min+max = {}",
+        "2) {}",
         range.iter().min().unwrap() + range.iter().max().unwrap()
     );
 }

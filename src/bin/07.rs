@@ -48,12 +48,12 @@ fn main() {
     }
 
     println!(
-        "{} bags can contain a shiny gold bag eventually",
+        "1) {}",
         visited.len()
     );
 
     println!(
-        "Shiny golden bags contain {} total bags",
+        "2) {}",
         count_contained("shiny gold", &containers) - 1
     )
 }

@@ -32,5 +32,6 @@ fn main() {
     }
 
     let mult: i32 = trees.iter().product();
-    println!("{trees:?}, {mult}");
+    println!("1) {}", trees[1]);
+    println!("2) {mult}");
 }

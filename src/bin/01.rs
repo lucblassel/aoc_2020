@@ -11,7 +11,7 @@ fn main() {
         .filter(|(num1, num2)| num1 + num2 == 2020);
 
     if let Some((num1, num2)) = pb1.next() {
-        println!("{num1} * {num2} = {}", num1 * num2);
+        println!("1) {}", num1 * num2);
     }
 
     let mut pb2 = numbers
@@ -19,6 +19,6 @@ fn main() {
         .filter(|(num1, num2, num3)| num1 + num2 + num3 == 2020);
 
     if let Some((num1, num2, num3)) = pb2.next() {
-        println!("{num1} * {num2} * {num3} = {}", num1 * num2 * num3);
+        println!("2) {}", num1 * num2 * num3);
     }
 }
